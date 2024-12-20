@@ -1,10 +1,11 @@
 import NotesDAO from "../dao/notesDAO.js";
 export default class NotesController{
     
-    static async apiGetNotes(res,req,next){
+    static async apiGetNotes(req,res,next){
+        req.query.notesPerPage;
         const notesPerPage = req.query.notesPerPage?
-        parseInt(req.query.notesPerPage):20
-        const page = req.query.page? parseInt(req.query.page): 0
+        parseInt(req.query.notesPerPage):5
+        const pageNumber = req.query.pageNumber? parseInt(req.query.pageNumber): 0
 
         let filters = {}
         if(req.query.title){
@@ -12,14 +13,14 @@ export default class NotesController{
         }
         else if(req.query.topic) {filters.topic= req.query.topic}
     
-    const { notesList, totalNumNotes} = await
-    NotesDAO.getNotes({filters,page,notesPerPage})
+    const { noteList, totalNumNotes} = await
+    NotesDAO.getNotes({filters,pageNumber,notesPerPage})
 
     let response = {
-        notes: notesList,
-        page:page,
+        notes: noteList,
+        page:pageNumber,
         filters:filters,
-        entries_per_page: notesPerPage,
+        notes_per_page: notesPerPage,
         total_results: totalNumNotes,
     }
     res.json(response)
