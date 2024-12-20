@@ -16,10 +16,10 @@ export default class NotesDAO{
 
 static async getNotes({
     filters = null,
-    page = 0,
-    notesPerPage = 20,
+    pageNumber = 0,
+    notesPerPage = 5,
 } = {}){
-let query
+let query;
 if(filters){
     if('title' in filters){
         query = {title:filters['title']}
@@ -32,13 +32,15 @@ try{
     cursor = await notes
                 .find(query)
                 .limit(notesPerPage)
-                .skip(notesPerPage*page)
-                totalNumNotes = await notes.countDocuments(query)
-                return {notesList, totalNumNotes}
+                .skip(notesPerPage*pageNumber)
+
+                const noteList = await cursor.toArray()
+                const totalNumNotes = await notes.countDocuments(query)
+                return {noteList, totalNumNotes}
 }
 catch(e){
     console.error(`unable to issue find command, ${e}`)
-    return {moviesList: [], totalNumNotes:0}
+    return {noteList: [], totalNumNotes:0}
 }
 }
 }
