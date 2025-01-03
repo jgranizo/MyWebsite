@@ -1,7 +1,8 @@
 import app from'./server.js'
 import mongodb from "mongodb"
 import dotenv from "dotenv"
-
+import NotesDAO from './dao/notesDAO.js';
+import BlogDAO from './dao/blogDAO.js';
 async function main(){
     console.log("Starting main function...");
     dotenv.config();
@@ -16,6 +17,10 @@ async function main(){
         console.log("Attempting to connect to MongoDB...");
 await client.connect();
 console.log("Connected to MongoDB");
+await NotesDAO.injectDB(client)
+
+console.log("connected to Collection: notes")
+await BlogDAO.injectDB(client)
 
         
         app.listen(port, ()=>{
