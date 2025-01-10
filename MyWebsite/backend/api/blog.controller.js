@@ -2,10 +2,10 @@ import BlogDAO from '../dao/blogDAO.js'
 export default class BlogController{
     static async apiPostBlog(req,res,next){
         try{
-            const  blogId = req.body.blog_id
+            const  blogId = req.body.blogId
             const content=req.body.content
             const title=req.body.title;
-            const topic = req.body.title;
+            const topic = req.body.topic;
                 
             
             const date = new Date()
@@ -25,14 +25,16 @@ export default class BlogController{
 
     static async apiUpdateBlog(req,res,next){
         try{
-            const blogId= req.body.blog_id;
+            const blogId= req.body.blogId;
             const content= req.body.content;
             const date = new Date();
             const topic = req.body.topic;
-            const BlogResponse = await BlogDAO.UpdateBlog(
+            const title = req.body.title;
+            const BlogResponse = await BlogDAO.updateBlog(
                 blogId,
                 content,
                 topic,
+                title,
                 date
             )
             var {error} = BlogResponse
@@ -51,8 +53,8 @@ export default class BlogController{
 
 static async apiDeleteBlog(req,res,next){
     try{
-        const blogId=req.body.blog_id
-        const reviewResponse = await BlogDAO.deleteBlog(
+        const blogId=req.body.blogId
+        const BlogResponse = await BlogDAO.deleteBlog(
             blogId
         )
         res.json({status:"success"})
