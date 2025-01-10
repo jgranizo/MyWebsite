@@ -4,8 +4,6 @@ let blogs
 export default class BlogDAO{
     static async  injectDB(conn){
         if(blogs){return}
-
-    
     try{
         blogs=await conn.db(process.env.MYBLOG_NS).collection('notes')
 
@@ -35,4 +33,30 @@ catch(e){
 }
 
 }
+static async updateBlog(blogId,updatedContent,updatedTitle,updatedTopic,date){
+    try{const updateResponse = await blogs.updateOne(
+        {blogID:blogId},
+{$set:{content:updatedContent,title:updatedTitle,topic:updatedTopic,CurrentDate:date}}
+    )
+    return updateResponse
+}
+catch(e){
+    console.error(`unable to update review: ${e}`)
+    return {error:e}
+}
+}
+
+static async deleteBlog(blogId){
+    try{
+        const deleteResponse = await blogs.deleteOne({
+            blogID:blogId
+        })
+        return deleteResponse
+    }
+    catch(e){
+        console.error(`unable to delete blog post: ${e}`)
+        return {error: e}
+    }
+}
+
 }

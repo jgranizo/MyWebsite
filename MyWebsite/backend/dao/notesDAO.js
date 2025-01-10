@@ -1,5 +1,6 @@
 /**Access notes objects */
-
+import mongodb from "mongodb"
+const ObjectId = mongodb.ObjectId
 let notes
 
 export default class NotesDAO{
@@ -42,6 +43,32 @@ catch(e){
     console.error(`unable to issue find command, ${e}`)
     return {noteList: [], totalNumNotes:0}
 }
+}
+
+
+
+static async getTopics(){
+    let topics = []
+    try{topics = await notes.distinct("topic")
+        return topics
+    }
+
+    catch(e){
+        console.log(`unable to get topics, ${e}`)
+        return topics
+    }
+
+
+}
+static async getNoteById(id){
+    try{
+       let numberID= Number(id)
+        return await notes.findOne({blogID:numberID})
+    }
+    catch(e){
+        console.error(`something went wrong in getNoteById: ${e}`)
+        throw e
+    }
 }
 }
 

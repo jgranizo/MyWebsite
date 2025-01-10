@@ -22,6 +22,7 @@ await NotesDAO.injectDB(client)
 console.log("connected to Collection: notes")
 await BlogDAO.injectDB(client)
 
+console.log("connected to Collection: notes")
         
         app.listen(port, ()=>{
             console.log('server is running on port:' + port);

@@ -25,4 +25,34 @@ export default class NotesController{
     }
     res.json(response)
 }
+
+
+static async apiGetNoteById(req,res,next){
+    try{
+        let id = req.params.id || {}
+        let note = await NotesDAO.getNoteById(id)
+  
+        if(!note){
+            res.status(404).json({error:"not found"})
+            return
+        }
+        res.json(note)
+    }
+    catch(e){
+        console.log(`api, ${e}`)
+        res.status(500).json({error:e})
+    }
+}
+
+static async apiGetTopic(req,res,next){
+try{
+    let propertyTypes = await NotesDAO.getTopics()
+    res.json(propertyTypes)
+}
+catch(e){
+    console.log(`api,${e}`)
+    res.status(500).json({error:e})
+        }
+    }
+
 }
