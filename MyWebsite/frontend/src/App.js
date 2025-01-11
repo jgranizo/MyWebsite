@@ -8,29 +8,24 @@ import {
   Routes,
   Route,
   NavLink,
-  BrowserRouter,
+  Link,
 } from "react-router-dom";
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-
+import Login from './components/login';
 function App(){
-  const[
-    selectedChart,
-    setSelectedChart,
-  ] = useState("");
-  const [data,setSelectedData] = useState([])
-  const handleRadioChange = (
-    value
-  ) => {setSelectedChart(value);};
- 
+  const [user,setUser] = React.useState(null)
+  async function login(user=null){
+    setUser(user)
+  }
 
-
-
+async function logout(){
+  setUser(null)
+}
 
   return(
    
 <div>
-  <BrowserRouter>
   <div>
 
   <Navbar bg="light" expand="lg">
@@ -42,12 +37,22 @@ function App(){
             <Nav.Link as={NavLink} to={"/blog"}>Blog</Nav.Link>
             <Nav.Link as={NavLink} to={"/Resume"}>Resume</Nav.Link>
             <Nav.Link as={NavLink} to={"/Projects"}>Projects</Nav.Link>
+            <Nav.Link>{user ? (<a onClick={logout}>Logout User</a>):
+            (<Link to={"/login"}>Login</Link>)}</Nav.Link>
           </Nav>
         </Navbar.Collapse>
     </Navbar>
-        <Routes>
-          <Route path="/" element={<HomePage></HomePage>}></Route>
-          <Route path="/blog" element={<Blog></Blog>}></Route>
+    <Routes>
+
+
+          <Route path='/' element={<HomePage />} />
+          <Route path="/home" element={<HomePage />} />
+
+          <Route path="/blogs" element={<BlogsList />} />
+          <Route path="/blogs/:id" element={<Blog user={user} />} />
+          <Route path="/login" element={<Login login={login} />} />
+          <Route path="/blogs/update" element={<AddBlog user={user} />} />
+      
         </Routes>
   </div>
   {/**<input type='radio'
@@ -56,8 +61,7 @@ function App(){
   checked={selectedChart===""} onChange={()=>handleRadioChange("")}></input>
   
   **/} 
-  </BrowserRouter>
-</div>
+  </div>
 
   )
 }

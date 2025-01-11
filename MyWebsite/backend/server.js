@@ -11,7 +11,7 @@ app.use(cors())
  */ 
 app.use(express.json()) 
 
-app.use("/api/v1/notes",notes)
+app.use("/api/v1/blogs",notes)
 /**For non routes, return 404 error */
 app.use('*',(req,res)=>{
     res.status(404).json({error:"not found"})
