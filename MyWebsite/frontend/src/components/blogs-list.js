@@ -63,7 +63,7 @@ const BlogsList = (props)=>{
                                 >Search
                                 </Button>
                                {!props.user && 
-                               <Link to={"/blogs/update"}>
+                               <Link to={"/blogs/add"}>
                                 Add Blog Post</Link>}
                                 </Col>
                         </Row>
