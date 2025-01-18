@@ -15,9 +15,10 @@ import Navbar from 'react-bootstrap/Navbar';
 import Login from './components/login';
 function App(){
   const [user,setUser] = React.useState(null)
-  async function login(user=null){
-    setUser(user)
-  }
+ const loginSetter = useCallback(user=>{
+  setUser(user);
+
+ },[setUser]);
 
 async function logout(){
   setUser(null)
@@ -34,11 +35,10 @@ async function logout(){
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
             <Nav.Link as={NavLink} to={"/"}>Home</Nav.Link>
-            <Nav.Link as={NavLink} to={"/blog"}>Blog</Nav.Link>
+            <Nav.Link as={NavLink} to={"/blogs"}>Blog</Nav.Link>
             <Nav.Link as={NavLink} to={"/Resume"}>Resume</Nav.Link>
             <Nav.Link as={NavLink} to={"/Projects"}>Projects</Nav.Link>
-            <Nav.Link>{user ? (<a onClick={logout}>Logout User</a>):
-            (<Link to={"/login"}>Login</Link>)}</Nav.Link>
+            <Nav.Link as={NavLink} to={user? "" :"/login"}>{user ? "Logout User" : "Login"}</Nav.Link>
           </Nav>
         </Navbar.Collapse>
     </Navbar>
@@ -50,7 +50,7 @@ async function logout(){
 
           <Route path="/blogs" element={<BlogsList />} />
           <Route path="/blogs/:id" element={<Blog user={user} />} />
-          <Route path="/login" element={<Login login={login} />} />
+          <Route path="/login" element={<Login login={user} loginSetter={loginSetter}/>} />
           <Route path="/blogs/update" element={<AddBlog user={user} />} />
       
         </Routes>
