@@ -72,14 +72,13 @@ const BlogsList = (props)=>{
                         {blogs.map((blog)=>{
                             return (
                                 <Card>
-      <Card.Header>{blog.title}</Card.Header>
+      <Card.Header>Topic: {blog.topic}</Card.Header>
       <Card.Body>
         <blockquote className="blockquote mb-0">
-          <p>
-        {blog.content}
-          </p>
+         <p><Link to={"/blog/"+blog.blogID}>{blog.title}</Link></p>
           <footer className="blockquote-footer">
             <cite>J Granizo</cite>
+            
           </footer>
         </blockquote>
       </Card.Body>

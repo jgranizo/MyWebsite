@@ -8,6 +8,9 @@ import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
 import Button from 'react-bootstrap/esm/Button';
 
-const Blog = (props) => {
-    const []
+const addBlog = (props) => {
+    return (<div>
+
+    </div>)
 }
+export default addBlog

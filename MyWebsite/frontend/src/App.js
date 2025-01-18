@@ -49,7 +49,7 @@ async function logout(){
           <Route path="/home" element={<HomePage />} />
 
           <Route path="/blogs" element={<BlogsList />} />
-          <Route path="/blogs/:id" element={<Blog user={user} />} />
+          <Route path="/blog/:id" element={<Blog user={user} />} />
           <Route path="/login" element={<Login login={user} loginSetter={loginSetter}/>} />
           <Route path="/blogs/update" element={<AddBlog user={user} />} />
       

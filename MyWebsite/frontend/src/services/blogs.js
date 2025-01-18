@@ -15,19 +15,19 @@ class BlogDataService{
         )
     }
 
-    createReview(data){
+    createBlog(data){
         return axios.post(`http://localhost:5000/api/v1/blogs/update`, data)
 
     }
-    updateReview(data){
+    updateBlog(data){
         return axios.put(`http://localhost:5000/api/v1/blogs/update`,data)
 
     }
 
-    deleteReview(id){
+    deleteBlog(id){
         return axios.delete(
             `http://localhost:5000/api/v1/blogs/update`,
-            {data:{blogID:id}}
+            {data:{blogId:id}}
         )
     }
 
