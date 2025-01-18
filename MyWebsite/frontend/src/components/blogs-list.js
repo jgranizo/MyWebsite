@@ -7,7 +7,7 @@ import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
 import Container from 'react-bootstrap/Container';
 import Card from 'react-bootstrap/Card';
-const BlogsList = ()=>{
+const BlogsList = (props)=>{
     const [blogs, setBlogs] = useState([]);
     const [searchTopic, setSearchTopic] = useState("");
 
@@ -62,6 +62,9 @@ const BlogsList = ()=>{
                                 onClick={findByTopic}
                                 >Search
                                 </Button>
+                               {!props.user && 
+                               <Link to={"/blogs/update"}>
+                                Add Blog Post</Link>}
                                 </Col>
                         </Row>
                     </Form>
