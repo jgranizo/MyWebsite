@@ -2,37 +2,37 @@ import axios from "axios";
 
 class BlogDataService{
     getAll(page=0){
-        return axios.get(`http://localhost:5000/?page=${page}`)
+        return axios.get(`https://deploy-mern-api-vert.vercel.app/?page=${page}`)
     }
 
 
     get(id){
-        return axios.get(`http://localhost:5000/id/${id}`)
+        return axios.get(`https://deploy-mern-api-vert.vercel.app/id/${id}`)
     }
     find(query,by = "topic", page = 0){
         return axios.get(
-            `http://localhost:5000/?${by}=${query}&page=${page}`
+            `https://deploy-mern-api-vert.vercel.app/?${by}=${query}&page=${page}`
         )
     }
 
     createBlog(data){
-        return axios.post(`http://localhost:5000/update`, data)
+        return axios.post(`https://deploy-mern-api-vert.vercel.app/update`, data)
 
     }
     updateBlog(data){
-        return axios.put(`http://localhost:5000/update`,data)
+        return axios.put(`https://deploy-mern-api-vert.vercel.app/update`,data)
 
     }
 
     deleteBlog(id){
         return axios.delete(
-            `http://localhost:5000/update`,
+            `https://deploy-mern-api-vert.vercel.app/update`,
             {data:{blogId:id}}
         )
     }
 
     getTopic(){
-        return axios.get("http://localhost:5000/topic")
+        return axios.get("https://deploy-mern-api-vert.vercel.app/topic")
     }
 
 }
