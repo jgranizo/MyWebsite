@@ -58,17 +58,7 @@ useEffect(()=>{
     getBlog(id)
 },[id])
 
-const deleteBlog = (id)=>{
-    BlogDataService.deleteBlog(id)
-    .then(response=>setBlog({
-        blogId:"None",
-        content:"Blog no longer exists",
-        title:"",
-        topic:"Deleted",
-        date:""
-    }
-    )).catch(e=>console.log(e))
-}
+
 return (
     <div>
         <Card
@@ -84,7 +74,6 @@ return (
             <Card.Text>
               {blog.content}
             </Card.Text>
-            {!props.user && <Button variant="primary" onClick={()=>deleteBlog(blog.blogID)}>Delete</Button>}
             <Card.Footer>Created on: {blog.CurrentDate}</Card.Footer>
           </Card.Body>
         </Card>
