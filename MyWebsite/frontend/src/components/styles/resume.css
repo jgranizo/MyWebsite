@@ -1,7 +1,7 @@
 img{
-    height:150vh;
-    width:50vw;
+   height: fit-content;
+   width:70%;
     display: flex;
-  margin-left:25%
+  margin-left:17%;
 
 }

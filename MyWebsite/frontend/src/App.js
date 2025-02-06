@@ -5,6 +5,7 @@ import BlogsList from './components/blogs-list';
 import Resume from './components/resume'
 import github from './components/images/github-mark.ico'
 import linkedin from './components/images/linkedin.ico'
+import './components/styles/app.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {
   Routes,
@@ -34,9 +35,8 @@ function App(){
 
     </Navbar>
     <div className='logos'>
-    <a href="https://www.linkedin.com/in/jeremygranizo/"target="_blank" rel="noopener noreferrer"><img src={linkedin} alt='linkedin icon' style={{height:"30px" ,width:"30px"}}></img></a>
-    <a href="https://www.github.com/jgranizo/"target="_blank" rel="noopener noreferrer"><img src={github} alt='github icon' style={{height:"30px" ,width:"25px"}}></img></a>
-    #TODO mail to me and fix css of logos
+    <a href="https://www.linkedin.com/in/jeremygranizo/"target="_blank" rel="noopener noreferrer"><img src={linkedin} alt='linkedin icon' style={{height:"50px" ,width:"50px"}}></img></a>
+    <a href="https://www.github.com/jgranizo/"target="_blank" rel="noopener noreferrer"><img src={github} alt='github icon' style={{height:"45px" ,width:"45px"}}></img></a>
     </div>
     </div>
     <Routes>
