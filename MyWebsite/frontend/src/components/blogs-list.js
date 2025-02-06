@@ -62,9 +62,7 @@ const BlogsList = (props)=>{
                                 onClick={findByTopic}
                                 >Search
                                 </Button>
-                               {!props.user && 
-                               <Link to={"/blogs/add"}>
-                                Add Blog Post</Link>}
+                               
                                 </Col>
                         </Row>
                     </Form>
