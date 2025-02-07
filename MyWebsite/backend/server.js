@@ -5,7 +5,7 @@ import dotenv from "dotenv";
 dotenv.config()
 const app = express()
 app.use(cors(
-    {origin:["https://jeremygranizo.vercel.app","jeremygranizo.tech","www.jeremygranizo.tech"],
+    {origin:["https://jeremygranizo.vercel.app","https://jeremygranizo.tech","https://www.jeremygranizo.tech"],
         methods:["POST","GET","PUT","DELETE"],
         credentials:true
     }
