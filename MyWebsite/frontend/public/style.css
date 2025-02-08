@@ -1,0 +1,75 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --colorprimary:black;
+    --colorsecondary:white;
+    --coloraccent:rgb(12, 94, 194);
+    --ff:"DM Sans","sans-serif"
+
+}
+body{
+    padding-top: 60px;
+}
+
+.navbar{
+    position: fixed;
+    display: flex;
+    justify-content: space-around;
+    top:0px;
+    width: 100%;
+    z-index: 1000;
+    border-bottom: none;
+    background-color: var(--colorsecondary);
+
+}
+.logos{
+    display: flex;
+    justify-content:center;
+}
+.logos a{
+    padding: 0px;
+    margin-right: 20px;
+    margin-top: 10px;
+}
+.navbar ul {list-style: none;
+display: flex;
+justify-content:space-between;
+align-items: center;
+padding: 0;
+}
+.navbar ul li{
+    margin-right: 50px;
+    margin-left: 5px;
+}
+.navbar ul li a{
+    color: var(--colorprimary);
+    text-decoration: none;
+    font-size:large;
+transition: color 0.3s ease;}
+.navbar ul li a:hover{
+    color: var(--coloraccent);
+}
+
+svg{
+    fill:var(--colorprimary);
+    width:30px
+}
+svg:hover{
+    fill:var(--coloraccent)
+}
+.my-photo{
+    width:auto;
+    height: 55vh;
+    border-radius: 50%;
+}
+.intro-container{
+    display: flex;
+    justify-content: center;
+}
+.about-me-text{
+  align-content: center;
+}
