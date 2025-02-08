@@ -22,7 +22,7 @@
         <li><a href="#home">Home</a></li>
         <li><a href="#experience-section">Experience</a></li>
         <li><a href="#projects-section">Projects</a></li>
-        <li><a href="blog.html">blog</a></li>
+        <li><a href="blog.html">Blog</a></li>
         <li><a href="./images/resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a></li>
       </ul>
       <div class="logos">
@@ -51,21 +51,40 @@
         <div class="experience-column">
           <h3>Web Developer for Facepainting company</h3>
           <div class="experience-description">
-            <p>Duties on the job</p>
+            <h4>Developed a responsive, user-friendly webpage to enhance client interaction and increase business opportunities.</h4>
+        <ul>
+            <li> Technologies used: React, Google Sheets API, Netlify</li> 
+           <li> Designed and implemented a Contact Me form that allows users to send inquiries and directly stores details in a Google Sheet.</li> 
+            <li>Integrated an email notification system to alert the client when a new inquiry is received</li> 
+            <li>The launch of the website resulted in a 30% increase in client acquisition due to improved online presence and accessibility.</li> 
+          </ul>
           </div>
 
         </div>
         <div class="experience-column">
           <h3>Fullfilment Associate for Amazon</h3>
           <div class="experience-description">
-            <p>Duties On the job</p>
+           <h4>Managed a wide range of tasks in the fulfillment process, ensuring smooth operations and efficient handling of packages.</h4>
+           <ul>
+            <li>Moved packages from trucks to conveyor belts and transitioned them through the process until they were ready for scanning and shipping.
+              <li>Utilized Amazon’s services to close and open containers, ensuring accurate scanning and loading into trucks for delivery.</li>
+              <li>Coordinated and handed out tasks to the Returns Team, providing support by ensuring they had the necessary tools and assisting with computer systems for efficient returns processing.</li>
+              <li>Fostered a collaborative work environment by offering guidance and ensuring seamless communication across departments.</li>
+           </ul>
           </div>
 
         </div>
         <div class="experience-column">
           <h3>Backwaiter for Tabor Road Tavern</h3>
           <div class="experience-description">
-            <p>Duties On the job</p>
+            <h4>Contribut to providing exceptional service in a fast-paced, customer-focused environment while supporting the kitchen team and enhancing communication across departments.</h4>
+            <ul>
+              <li>Developed outstanding communication skills by coordinating between customers, servers, and the kitchen to ensure seamless service.</li>
+              <li>Demonstrate strong teamwork abilities by assisting colleagues in various tasks, ensuring smooth operations during high-volume periods.</li>
+              <li>Deliver top-tier customer service, addressing customer needs and providing a positive dining experience, leading to increased customer satisfaction.</li>
+              <li>Gainingleadership experience by taking on responsibilities in the kitchen, ensuring timely food preparation and order accuracy.</li>
+              <li>Assist in maintaining kitchen organization and cleanliness, supporting the kitchen team to improve overall efficiency.</li>
+            </ul>
           </div>
 
         </div>
@@ -76,16 +95,18 @@
   </section>
   <section id="projects-section">
     <h2>My Projects</h2>
-    <ul><li> <img src="images/" alt="ML Project" class="project-icon rectangle-icon"></li>
-      <li> <img src="images/" alt="Basketball API" class="project-icon circle-icon"></li>
-      <li> <img src="images/" alt="3rd project showcasing" class="project-icon triangle-icon"></li>
+    <ul>
+      <li> <img src="images/ml.jpg" alt="ML Project" class="project-icon rectangle-icon"></li>
+      <li> <img src="images/basketball.jpg" alt="Basketball API" class="project-icon circle-icon"></li>
+      <li> <img src="images/" alt="3rd project showcasing" class="project-icon" id='triangle-icon'></li>
     </ul>
   </section>
+
   <div id="sentimental-analysis-modal" class="modal">
     <div class="modal-content">
       <span class="close">&times;</span>
       <div class="modal-body">
-        <img src="images/" alt="ML project" class="modal-image">
+        <img src="images/ml.jpg"" alt="ML project" class="modal-image">
         <div class="modal-text">
           <h3>Sentimental Analysis project</h3>
           <o>Collaborated on training a BERT-uncased model on 1.6 million tweets to classify sentiment (Negative, Neutral, Positive).Collaborated on training a BERT-uncased model on 1.6 million tweets to classify sentiment (Negative, Neutral, Positive). Achieved:</o>
@@ -121,5 +142,5 @@
   </div>
     <div id="root"></div>
   </body>
-  <script src="/MyWebsite/frontend/src/modal.js"></script>
+  <script src="modal.js"></script>
 </html>

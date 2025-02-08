@@ -5,7 +5,10 @@ import dotenv from "dotenv";
 dotenv.config()
 const app = express()
 dotenv.config()
-app.use(cors())
+app.use(cors( {origin:["https://jeremygranizo.vercel.app","https://jeremygranizo.tech","https://www.jeremygranizo.tech"],
+    methods:["POST","GET","PUT","DELETE"],
+    credentials:true
+}))
 /**enables JSON parsing middleware to enable the server to read and accept JSON in a request's
  * body
  * middle ware helps data retrieval tremendously
