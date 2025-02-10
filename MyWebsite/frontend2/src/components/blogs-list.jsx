@@ -1,4 +1,4 @@
-import React,{useState,useEffect} from "react";
+import {useState,useEffect} from "react";
 import BlogDataService from "../services/blogs"
 import {Link} from "react-router-dom"
 import Form from 'react-bootstrap/Form';
@@ -7,7 +7,9 @@ import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
 import Container from 'react-bootstrap/Container';
 import Card from 'react-bootstrap/Card';
-const BlogsList = (props)=>{
+import 'bootstrap/dist/css/bootstrap.min.css';
+
+const BlogsList = ()=>{
     const [blogs, setBlogs] = useState([]);
     const [searchTopic, setSearchTopic] = useState("");
 
@@ -69,7 +71,7 @@ const BlogsList = (props)=>{
                     <Row>
                         {blogs.map((blog)=>{
                             return (
-                                <Card>
+                                <Card key={blog.blogID}>
       <Card.Header>Topic: {blog.topic}</Card.Header>
       <Card.Body>
         <blockquote className="blockquote mb-0">
