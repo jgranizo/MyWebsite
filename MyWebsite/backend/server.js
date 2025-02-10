@@ -5,6 +5,10 @@ import dotenv from "dotenv";
 dotenv.config()
 const app = express()
 app.use(cors(
+    {origin:["https://deploy-mern-1whq.vercel.app"],
+        methods:["POST","GET","PUT","DELETE"],
+        credentials:true
+    }
 ))
 /**enables JSON parsing middleware to enable the server to read and accept JSON in a request's
  * body

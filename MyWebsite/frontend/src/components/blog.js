@@ -1,11 +1,16 @@
-import  {useState, useEffect} from 'react'
-import {  useParams } from 'react-router-dom'
-import BlogDataService from '../services/blogs'
+import React, {useState, useEffect} from 'react'
+import { Link, useParams } from 'react-router-dom'
+import BlogDataService from '../services/blogs.js';
 import Card from 'react-bootstrap/Card';
+import Container from 'react-bootstrap/Container';
+import Image from 'react-bootstrap/Image';
+import Col from 'react-bootstrap/Col';
+import Row from 'react-bootstrap/Row';
+import Button from 'react-bootstrap/esm/Button';
 
 
 
-const Blog = () => {
+const Blog = (props) => {
     const [blog,setBlog] = useState({
         blogID:null,
         title:"",
@@ -53,7 +58,17 @@ useEffect(()=>{
     getBlog(id)
 },[id])
 
-
+const deleteBlog = (id)=>{
+    BlogDataService.deleteBlog(id)
+    .then(response=>setBlog({
+        blogId:"None",
+        content:"Blog no longer exists",
+        title:"",
+        topic:"Deleted",
+        date:""
+    }
+    )).catch(e=>console.log(e))
+}
 return (
     <div>
         <Card
@@ -69,6 +84,7 @@ return (
             <Card.Text>
               {blog.content}
             </Card.Text>
+            {!props.user && <Button variant="primary" onClick={()=>deleteBlog(blog.blogID)}>Delete</Button>}
             <Card.Footer>Created on: {blog.CurrentDate}</Card.Footer>
           </Card.Body>
         </Card>
