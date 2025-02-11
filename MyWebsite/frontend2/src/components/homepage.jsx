@@ -1,7 +1,21 @@
 import profilepicture from "../assets/profilepic.jpg"
 import ml from "../assets/ml.jpg"
 import basketball from '../assets/basketball.jpg'
+import gym from "../assets/gym.jpg"
+import {  useState } from "react"
+import Button from "react-bootstrap/esm/Button"
+//todo: Implement Modal from chakra!
 function HomePage(){
+  const [selected, setIsSelected] = useState(null);
+
+  
+const isSelected =(text)=>{
+console.log("Clicked");
+setIsSelected(text);
+console.log(text,selected);
+
+}
+
 
    
     return(
@@ -69,9 +83,9 @@ function HomePage(){
   <section id="projects-section">
     <h2>My Projects</h2>
     <ul>
-      <li> <img src={ml} alt="ML Project" className="project-icon rectangle-icon"/></li>
-      <li> <img src={basketball} alt="Basketball API" className="project-icon circle-icon"/></li>
-      <li> <img src="images/" alt="3rd project showcasing" className="project-icon" id='triangle-icon'/></li>
+      <li> <Button onClick={()=>isSelected("ml")}><img src={ml} alt="ML Project" className="project-icon rectangle-icon"/></Button></li>
+      <li> <Button onClick={()=>isSelected("basketball")}><img src={basketball} alt="Basketball API" className="project-icon circle-icon"/></Button></li>
+      <li> <Button onClick={()=>isSelected("gym")}><img src={gym} alt="3rd project showcasing" className="project-icon" id='triangle-icon'/></Button></li>
     </ul>
   </section>
 
