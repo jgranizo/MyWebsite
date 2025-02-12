@@ -7,12 +7,12 @@ function App() {
 
   return (
     <>
-   
+
      <div className='navbar-home'>
         <ul>
-      <li> <NavLink  to={"/"}>Home</NavLink></li> 
-      <li>  <a href='#experience-section'>Experience</a></li> 
-      <li><a href='#projects-section'>Projects</a></li> 
+      <li> <a href="/#home">Home</a></li> 
+      <li>  <a href='/#experience-section'>Experience</a></li> 
+      <li><a href='/#projects-section'>Projects</a></li> 
       <li> <NavLink to={"/blogs"}>Blog</NavLink></li> 
       <li> <a href={'/resume.pdf'} target="_blank" rel="noopener noreferrer">Resume</a></li> 
         </ul>
