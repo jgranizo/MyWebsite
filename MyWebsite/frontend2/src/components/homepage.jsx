@@ -93,7 +93,7 @@ const handleSelection= (key)=>{
         <div className="experience-column">
           <h3>Backwaiter for Tabor Road Tavern</h3>
           <div className="experience-description">
-            <h4>Contribut to providing exceptional service in a fast-paced, customer-focused environment while supporting the kitchen team and enhancing communication across departments.</h4>
+            <h4>Contribute to providing exceptional service in a fast-paced, customer-focused environment while supporting the kitchen team and enhancing communication across departments.</h4>
             <ul>
               <li>Developed outstanding communication skills by coordinating between customers, servers, and the kitchen to ensure seamless service.</li>
               <li>Demonstrate strong teamwork abilities by assisting colleagues in various tasks, ensuring smooth operations during high-volume periods.</li>
