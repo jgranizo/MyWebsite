@@ -27,11 +27,11 @@ body{
   }
 
   .navbar-home{
-    max-width: fit-content;
+    max-width: 500px;
     position: fixed;
     justify-content: space-around;
     top:0px;
-    width: 90%;
+    width: 100%;
     z-index: 1000;
     border-bottom: none;
     background-color: var(--colorsecondary);  
