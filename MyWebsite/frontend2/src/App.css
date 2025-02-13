@@ -36,7 +36,6 @@ body{
     border-bottom: none;
     background-color: var(--colorsecondary);  
     display: flex;
-    flex-wrap: wrap ;
   }
   .navbar-home ul li a{
     color: var(--colorprimary);
