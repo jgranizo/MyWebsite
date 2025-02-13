@@ -18,7 +18,7 @@ body{
 @media (max-width: 768px) { 
   /* Target mobile screens */
   body{
-    padding-top: 100px;
+    padding-top: 125px;
   }
   .my-photo {
     max-height: 225px; /* Reduce image size on mobile */
