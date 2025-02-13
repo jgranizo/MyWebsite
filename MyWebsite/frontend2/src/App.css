@@ -27,7 +27,6 @@ body{
   }
 
   .navbar-home{
-    max-width: 300px;
     position: fixed;
     justify-content: space-around;
     top:0px;
@@ -36,21 +35,31 @@ body{
     border-bottom: none;
     background-color: var(--colorsecondary);  
     display: flex;
+    flex-wrap: wrap ;
   }
   .navbar-home ul li a{
-    display: flex;
     color: var(--colorprimary);
     text-decoration: none;
-    font-size:1px;
+    font-size:2px;
   transition: color 0.3s ease;}
   .navbar-home ul li a:hover{
     color: var(--coloraccent);
   }
   .navbar-home ul li{
-    margin-right: 0px;
+    max-width: 300px;
     display: flex;
-    margin-left: 0px;
+    flex-wrap: wrap;
+    margin-right: .5px;
+    margin-left: .5px;
   }
+  
+svg{
+  fill:var(--colorprimary);
+  width:20px
+}
+svg:hover{
+  fill:var(--coloraccent)
+}
   
 }
 
@@ -63,6 +72,7 @@ body{
   z-index: 1000;
   border-bottom: none;
   background-color: var(--colorsecondary);
+  
 
 }
 .logos{
@@ -72,7 +82,7 @@ body{
 .logos a{
   padding: 0px;
   margin-right: 20px;
-  margin-top: 6px;
+  margin-top: 10px;
 }
 .navbar-home ul {list-style: none;
 display: flex;
@@ -81,19 +91,14 @@ align-items: center;
 padding: 0;
 }
 .navbar-home ul li{
-  display: flex;
   margin-right: 50px;
   margin-left: 5px;
-  margin-top: .6rem;
 }
 .navbar-home ul li a{
-  display: flex;
-
   color: var(--colorprimary);
   text-decoration: none;
   font-size:large;
-transition: color 0.3s ease;
-}
+transition: color 0.3s ease;}
 .navbar-home ul li a:hover{
   color: var(--coloraccent);
 }
