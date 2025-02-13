@@ -26,6 +26,17 @@ body{
     margin-top: 3.5rem;
   }
 
+  .navbar-home{
+    position: fixed;
+    justify-content: space-around;
+    top:0px;
+    width: 100%;
+    z-index: 1000;
+    border-bottom: none;
+    background-color: var(--colorsecondary);  
+    display: flex;
+    flex-wrap: wrap ;
+  }
   .navbar-home ul li a{
     color: var(--colorprimary);
     text-decoration: none;
