@@ -40,7 +40,7 @@ body{
   .navbar-home ul li a{
     color: var(--colorprimary);
     text-decoration: none;
-    font-size:small;
+    font-size:xx-small;
   transition: color 0.3s ease;}
   .navbar-home ul li a:hover{
     color: var(--coloraccent);
