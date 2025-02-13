@@ -63,10 +63,11 @@ svg:hover{
 }
 .my-photo{
   width:auto;
-  height: 55vh;
+  height: 45vh;
   border-radius: 50%;
-  margin-left: 1.5rem;
-  margin-top: auto;
+  margin-left: 1rem;
+  margin-right: 3.5rem;
+  margin-top: 3.5rem;
 }
 
 .home{
@@ -75,14 +76,14 @@ svg:hover{
   margin-bottom: 2rem;
 
 }
-.home:hover{
-  box-shadow: 0 0 20px 10px var(--coloraccent);
+#home:hover{
+  box-shadow: 10px 0 20px 10px var(--coloraccent);
   transition: all .4s ease;
 
 }
 .about-me-text{
 align-content: center;
-padding: 5.5rem;
+padding: 0rem;
 }
 
 .about-me-text h4{
@@ -97,10 +98,6 @@ margin-top: 0.5rem;}
 }
 
 
-#experience-section:hover{
-  box-shadow: 0 0 20px 10px var(--coloraccent);
-  transition: all .4s ease;
-}
 .experience-grid h3{
 display: flex;
 justify-content: center;

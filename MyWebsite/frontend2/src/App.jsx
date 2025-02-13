@@ -4,7 +4,11 @@ import HomePage from './components/homepage';
 import BlogsList from './components/blogs-list';
 import Blog from './components/blog';
 function App() {
-
+//TODO:
+/***Fix css of blogs
+ * fix css of mobile view, introductory
+ * 
+ */
   return (
     <>
 
