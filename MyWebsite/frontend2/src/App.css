@@ -31,7 +31,7 @@ body{
     position: fixed;
     justify-content: space-around;
     top:0px;
-    width: 100%;
+    width: 90%;
     z-index: 1000;
     border-bottom: none;
     background-color: var(--colorsecondary);  
