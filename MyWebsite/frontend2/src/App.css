@@ -12,13 +12,13 @@
 
 }
 body{
-  padding-top: px;
+  padding-top: 60px;
 }
 
-@media (max-width: 768px) { 
+@media (max-width: 500px) { 
   /* Target mobile screens */
   body{
-    padding-top: 125px;
+    padding-top: 150px;
   }
   .my-photo {
     max-height: 225px; /* Reduce image size on mobile */
@@ -40,29 +40,27 @@ body{
     display: flex;
     flex-wrap: wrap ;
     flex-direction: center;
-    padding:1rem 0
+    padding:.1rem 0
   }
 
-  .navbar-home ul li a{
-    color: var(--colorprimary);
-    text-decoration: none;
-    font-size:10px;
-  transition: color 0.3s ease;}
-  .navbar-home ul li a:hover{
-    color: var(--coloraccent);
+  #home:hover{
+    box-shadow: 0 0 0 0 var(--coloraccent);
+    transition: all .4s ease;
+  
   }
   .navbar-home ul li{
-    max-width: 300px;
     display: flex;
     flex-wrap: wrap;
-    margin:10px 0;
+    margin:-3.0px 0px -7px 0px;
   }
   .navbar-home ul {
+    max-width: 200px;
+
     display: flex;
     flex-direction: row; /* Make nav items vertical */
     align-items: center;
-    margin: auto;
-    width: 100%;
+    flex-wrap: wrap;
+    width: 90%;
   }
   
 svg{
@@ -141,6 +139,15 @@ svg:hover{
   box-shadow: 10px 0 20px 10px var(--coloraccent);
   transition: all .4s ease;
 
+}
+.title-card:hover{
+  color:var(--coloraccent)
+
+}
+.solo-blog{
+  display: flex;
+  justify-content: center;
+  margin-top: 5rem;
 }
 .about-me-text{
 align-content: center;

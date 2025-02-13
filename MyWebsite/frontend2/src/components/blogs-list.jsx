@@ -8,7 +8,6 @@ import Row from 'react-bootstrap/Row';
 import Container from 'react-bootstrap/Container';
 import Card from 'react-bootstrap/Card';
 import 'bootstrap/dist/css/bootstrap.min.css';
-
 const BlogsList = ()=>{
     const [blogs, setBlogs] = useState([]);
     const [searchTopic, setSearchTopic] = useState("");
@@ -44,7 +43,7 @@ const BlogsList = ()=>{
             setSearchTopic(searchTopic);
         }; return (
            
-            <div className="App">
+            <div className="blogs-section">
                  {console.log("hello")}
                 <Container>
                     <Form>
@@ -71,13 +70,13 @@ const BlogsList = ()=>{
                     <Row>
                         {blogs.map((blog)=>{
                             return (
-                                <Card key={blog.blogID}>
+                                <Card key={blog.blogID} style={{width:"15rem",margin:"1rem"}}>
       <Card.Header>Topic: {blog.topic}</Card.Header>
-      <Card.Body>
+      <Card.Body className="title-card">
         <blockquote className="blockquote mb-0">
          <p><Link to={"/blog/"+blog.blogID}>{blog.title}</Link></p>
           <footer className="blockquote-footer">
-            <cite>J Granizo</cite>
+            <cite>Jeremy Granizo</cite>
             
           </footer>
         </blockquote>
