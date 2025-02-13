@@ -55,12 +55,12 @@ useEffect(()=>{
 
 
 return (
-    <div>
+    <div className='solo-blog'>
         <Card
           bg={"light"}
           key={"light"}
           text={ 'dark'}
-          style={{ width: '18rem' }}
+          style={{ width: '30rem'}}
           className="mb-2"
         >
           <Card.Header>Topic: {blog.topic}</Card.Header>
