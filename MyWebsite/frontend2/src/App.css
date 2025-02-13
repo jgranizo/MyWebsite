@@ -35,8 +35,8 @@ body{
     color: var(--coloraccent);
   }
   .navbar-home ul li{
-    margin-right: 10px;
-    margin-left: 5px;
+    margin-right: 5px;
+    margin-left: 0px;
   }
   
 }
