@@ -2,7 +2,7 @@ import {useState,useEffect} from "react";
 import BlogDataService from "../services/blogs"
 import {Link} from "react-router-dom"
 import Form from 'react-bootstrap/Form';
-import Button from 'react-bootstrap/Button';
+//import Button from 'react-bootstrap/Button';
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
 import Container from 'react-bootstrap/Container';
@@ -11,7 +11,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 const BlogsList = ()=>{
     const [blogs, setBlogs] = useState([]);
-    const [searchTopic, setSearchTopic] = useState("");
+   // const [searchTopic, setSearchTopic] = useState("");
 
 
     useEffect(()=>{
@@ -28,7 +28,7 @@ const BlogsList = ()=>{
         });
     };
 
-    const find = (query, by) =>{
+   /**  const find = (query, by) =>{
         BlogDataService.find(query, by)
         .then(response => {console.log(response.data)
             setBlogs(response.data.notes)
@@ -37,12 +37,13 @@ const BlogsList = ()=>{
             console.log(e)
         })}
         const findByTopic = () =>{
-            find(searchTopic,"topic")
+           find(searchTopic,"topic")
         }
         const onChangeSearchTopic = (e) => {
             const searchTopic = e.target.value
             setSearchTopic(searchTopic);
-        }; return (
+        }; */
+        return (
            
             <div className="App">
                  {console.log("hello")}
@@ -50,8 +51,8 @@ const BlogsList = ()=>{
                     <Form>
                         <Row>
                             <Col>
-                            <Form.Group>
-                                <Form.Control
+                            { /**  <Form.Group>
+                             <Form.Control
                                 type="text"
                                 placeholder="Search by topic"
                                 value={searchTopic}
@@ -63,7 +64,7 @@ const BlogsList = ()=>{
                                 type="button"
                                 onClick={findByTopic}
                                 >Search
-                                </Button>
+                                </Button>*/}
                                
                                 </Col>
                         </Row>
