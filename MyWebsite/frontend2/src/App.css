@@ -12,10 +12,14 @@
 
 }
 body{
-  padding-top: 60px;
+  padding-top: px;
 }
 
-@media (max-width: 768px) { /* Target mobile screens */
+@media (max-width: 768px) { 
+  /* Target mobile screens */
+  body{
+    padding-top: 100px;
+  }
   .my-photo {
     max-height: 225px; /* Reduce image size on mobile */
     width:auto;
@@ -38,10 +42,11 @@ body{
     flex-direction: center;
     padding:1rem 0
   }
+
   .navbar-home ul li a{
     color: var(--colorprimary);
     text-decoration: none;
-    font-size:16px;
+    font-size:10px;
   transition: color 0.3s ease;}
   .navbar-home ul li a:hover{
     color: var(--coloraccent);
@@ -53,8 +58,10 @@ body{
     margin:10px 0;
   }
   .navbar-home ul {
-    flex-direction: column; /* Make nav items vertical */
+    display: flex;
+    flex-direction: row; /* Make nav items vertical */
     align-items: center;
+    margin: auto;
     width: 100%;
   }
   
