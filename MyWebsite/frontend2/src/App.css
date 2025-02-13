@@ -27,7 +27,7 @@ body{
   }
 
   .navbar-home{
-    max-width: 500px;
+    max-width: 300px;
     position: fixed;
     justify-content: space-around;
     top:0px;
@@ -41,13 +41,13 @@ body{
   .navbar-home ul li a{
     color: var(--colorprimary);
     text-decoration: none;
-    font-size:2px;
+    font-size:1px;
   transition: color 0.3s ease;}
   .navbar-home ul li a:hover{
     color: var(--coloraccent);
   }
   .navbar-home ul li{
-    margin-right: .5px;
+    margin-right: 0px;
     margin-left: 0px;
   }
   
