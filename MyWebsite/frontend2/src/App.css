@@ -38,6 +38,7 @@ body{
     display: flex;
   }
   .navbar-home ul li a{
+    display: flex;
     color: var(--colorprimary);
     text-decoration: none;
     font-size:1px;
@@ -47,6 +48,7 @@ body{
   }
   .navbar-home ul li{
     margin-right: 0px;
+    display: flex;
     margin-left: 0px;
   }
   
@@ -61,7 +63,6 @@ body{
   z-index: 1000;
   border-bottom: none;
   background-color: var(--colorsecondary);
-  
 
 }
 .logos{
@@ -71,7 +72,7 @@ body{
 .logos a{
   padding: 0px;
   margin-right: 20px;
-  margin-top: 10px;
+  margin-top: 6px;
 }
 .navbar-home ul {list-style: none;
 display: flex;
@@ -80,14 +81,19 @@ align-items: center;
 padding: 0;
 }
 .navbar-home ul li{
+  display: flex;
   margin-right: 50px;
   margin-left: 5px;
+  margin-top: .6rem;
 }
 .navbar-home ul li a{
+  display: flex;
+
   color: var(--colorprimary);
   text-decoration: none;
   font-size:large;
-transition: color 0.3s ease;}
+transition: color 0.3s ease;
+}
 .navbar-home ul li a:hover{
   color: var(--coloraccent);
 }
