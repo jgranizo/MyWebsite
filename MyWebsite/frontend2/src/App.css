@@ -25,6 +25,16 @@ body{
     margin-right: 3.5rem;
     margin-top: 3.5rem;
   }
+
+  .navbar-home ul li a{
+    color: var(--colorprimary);
+    text-decoration: none;
+    font-size:small;
+  transition: color 0.3s ease;}
+  .navbar-home ul li a:hover{
+    color: var(--coloraccent);
+  }
+  
 }
 
 .navbar-home{
@@ -36,6 +46,7 @@ body{
   z-index: 1000;
   border-bottom: none;
   background-color: var(--colorsecondary);
+  
 
 }
 .logos{
