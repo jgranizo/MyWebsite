@@ -34,6 +34,10 @@ body{
   .navbar-home ul li a:hover{
     color: var(--coloraccent);
   }
+  .navbar-home ul li{
+    margin-right: 10px;
+    margin-left: 5px;
+  }
   
 }
 
