@@ -52,8 +52,8 @@ const handleSelection= (key)=>{
         <img src={profilepicture} alt="Jeremy Granizo" className="my-photo" loading="lazy"/>
         <div className="about-me-text">
           <h1>Hi, I am Jeremy Granizo</h1>
-          <h4>Software engineer with a passion in helping others reach their goal</h4>
-            <h4>Machine Learning & Data Mining Enthusiast – Skilled in supervised, unsupervised learning</h4>
+          <h4>Software engineer Crafting Innovative Solutions: </h4>
+            <h4> Leveraging Cloud, Machine Learning, and Data to Solve Real-World Problems</h4>
         </div>
       </div>
     </section>
