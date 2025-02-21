@@ -67,40 +67,24 @@ const handleSelection= (key)=>{
         <div className="experience-column">
           <h3>Web Developer for Facepainting company</h3>
           <div className="experience-description">
-            <h4>Developed a responsive, user-friendly webpage to enhance client interaction and increase business opportunities.</h4>
-        <ul>
-            <li> Technologies used: React, Google Sheets API, Netlify</li> 
-           <li> Designed and implemented a Contact Me form that allows users to send inquiries and directly stores details in a Google Sheet.</li> 
-            <li>Integrated an email notification system to alert the client when a new inquiry is received</li> 
-            <li>The launch of the website resulted in a 30% increase in client acquisition due to improved online presence and accessibility.</li> 
-          </ul>
+            <p>Developed a responsive, user-friendly webpage to enhance client interaction and increase business opportunities.</p>
+        
           </div>
 
         </div>
         <div className="experience-column">
           <h3>Fullfilment Associate for Amazon</h3>
           <div className="experience-description">
-           <h4>Managed a wide range of tasks in the fulfillment process, ensuring smooth operations and efficient handling of packages.</h4>
-           <ul>
-            <li>Moved packages from trucks to conveyor belts and transitioned them through the process until they were ready for scanning and shipping.</li>
-              <li>Utilized Amazon’s services to close and open containers, ensuring accurate scanning and loading into trucks for delivery.</li>
-              <li>Coordinated and handed out tasks to the Returns Team, providing support by ensuring they had the necessary tools and assisting with computer systems for efficient returns processing.</li>
-              <li>Fostered a collaborative work environment by offering guidance and ensuring seamless communication across departments.</li>
-           </ul>
+           <p>Managed a wide range of tasks in the fulfillment process, ensuring smooth operations and efficient handling of packages.</p>
+         
           </div>
 
         </div>
         <div className="experience-column">
           <h3>Backwaiter for Tabor Road Tavern</h3>
           <div className="experience-description">
-            <h4>Contribute to providing exceptional service in a fast-paced, customer-focused environment while supporting the kitchen team and enhancing communication across departments.</h4>
-            <ul>
-              <li>Developed outstanding communication skills by coordinating between customers, servers, and the kitchen to ensure seamless service.</li>
-              <li>Demonstrate strong teamwork abilities by assisting colleagues in various tasks, ensuring smooth operations during high-volume periods.</li>
-              <li>Deliver top-tier customer service, addressing customer needs and providing a positive dining experience, leading to increased customer satisfaction.</li>
-              <li>Gainingleadership experience by taking on responsibilities in the kitchen, ensuring timely food preparation and order accuracy.</li>
-              <li>Assist in maintaining kitchen organization and cleanliness, supporting the kitchen team to improve overall efficiency.</li>
-            </ul>
+            <p>Contribute to providing exceptional service in a fast-paced, customer-focused environment while supporting the kitchen team and enhancing communication across departments.</p>
+           
           </div>
 
         </div>
