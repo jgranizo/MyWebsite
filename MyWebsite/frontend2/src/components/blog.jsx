@@ -63,9 +63,9 @@ return (
           style={{ width: '30rem'}}
           className="mb-2"
         >
-          <Card.Header>Topic: {blog.topic}</Card.Header>
+          <Card.Header>Topic: {blog.title}</Card.Header>
           <Card.Body>
-            <Card.Title>{blog.title} </Card.Title>
+            <Card.Title>{blog.topic} </Card.Title>
             <Card.Text>
               {blog.content}
             </Card.Text>

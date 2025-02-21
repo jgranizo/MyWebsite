@@ -72,10 +72,10 @@ const BlogsList = ()=>{
                         {blogs.map((blog)=>{
                             return (
                                 <Card key={blog.blogID} style={{width:"15rem",margin:"1rem"}}>
-      <Card.Header>Topic: {blog.topic}</Card.Header>
+      <Card.Header>Topic: {blog.title}</Card.Header>
       <Card.Body className="title-card">
         <blockquote className="blockquote mb-0">
-         <p><Link to={"/blog/"+blog.blogID}>{blog.title}</Link></p>
+         <p><Link to={"/blog/"+blog.blogID}>{blog.topic}</Link></p>
           <footer className="blockquote-footer">
             <cite>Jeremy Granizo</cite>
             
